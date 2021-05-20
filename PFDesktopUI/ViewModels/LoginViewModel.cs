@@ -14,6 +14,7 @@ namespace PFDesktopUI.ViewModels
         private string _userName;
         private string _password;
         private IAPIHelper _apiHelper;
+        private string _errorMessage;
 
 
         public LoginViewModel(IAPIHelper apiHelper)
@@ -45,6 +46,25 @@ namespace PFDesktopUI.ViewModels
             }
         }
 
+        public bool IsErrorVisible { 
+            get 
+            {
+                return _errorMessage?.Length > 0; 
+            } 
+        }
+
+
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+
+            set { 
+                _errorMessage = value;
+                NotifyOfPropertyChange(() => IsErrorVisible);
+                NotifyOfPropertyChange(() => ErrorMessage);
+            }
+        }
+
 
         public bool CanLogIn
         {
@@ -63,11 +83,13 @@ namespace PFDesktopUI.ViewModels
         {
             try
             {
+                ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                //TODO: Flush out different exception possibilities. 
+                ErrorMessage = ex.Message;
                 throw;
             }
 
