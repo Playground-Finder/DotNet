@@ -1,5 +1,7 @@
 ﻿using Caliburn.Micro;
 using PFDesktopUI.Helpers;
+using PFDesktopUI.Library.Api;
+using PFDesktopUI.Library.Models;
 using PFDesktopUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -32,6 +34,7 @@ namespace PFDesktopUI
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<ILoggedInUserModel,LoggedInUserModel>()
                 .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()

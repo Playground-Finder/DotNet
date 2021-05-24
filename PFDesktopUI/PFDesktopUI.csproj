@@ -84,10 +84,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Helpers\APIHelper.cs" />
-    <Compile Include="Helpers\IAPIHelper.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
-    <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
@@ -136,6 +133,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PFDesktopUI.Library\PFDesktopUI.Library.csproj">
+      <Project>{47661493-C209-4DF1-9F41-490120EAAA2B}</Project>
+      <Name>PFDesktopUI.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

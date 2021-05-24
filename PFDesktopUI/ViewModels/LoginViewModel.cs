@@ -1,5 +1,5 @@
 ﻿using Caliburn.Micro;
-using PFDesktopUI.Helpers;
+using PFDesktopUI.Library.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,6 +85,7 @@ namespace PFDesktopUI.ViewModels
             {
                 ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
+                await _apiHelper.GetLoggedInUserInfo(result.Access_Token);
             }
             catch (Exception ex)
             {
