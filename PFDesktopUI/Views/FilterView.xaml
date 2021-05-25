@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="PFDesktopUI.Views.FilterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PFDesktopUI.Views"
+             mc:Ignorable="d" Background="White" FontSize="24"
+             d:DesignHeight="400" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- Column 0 -->
+
+        <!-- Column 1 -->
+
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="Filter Categories"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label FontSize="14">Age Group</Label>
+                </GroupBox.Header>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="AgeSelection">
+                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
+                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
+                    <ComboBoxItem>Both</ComboBoxItem>
+                </ComboBox>
+            </GroupBox>
+
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label FontSize="14">Accessibility</Label>
+                </GroupBox.Header>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="Accessibility">
+                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
+                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
+                    <ComboBoxItem>Both</ComboBoxItem>
+                </ComboBox>
+            </GroupBox>
+
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label FontSize="14">Ground Cover</Label>
+                </GroupBox.Header>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="GroundCover">
+                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
+                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
+                    <ComboBoxItem>Both</ComboBoxItem>
+                </ComboBox>
+            </GroupBox>
+
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label FontSize="14">Size</Label>
+                </GroupBox.Header>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="Size">
+                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
+                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
+                    <ComboBoxItem>Both</ComboBoxItem>
+                </ComboBox>
+            </GroupBox>
+
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label FontSize="14">Quadrant</Label>
+                </GroupBox.Header>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="Quandrant">
+                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
+                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
+                    <ComboBoxItem>Both</ComboBoxItem>
+                </ComboBox>
+            </GroupBox>
+
+            <Button Content="Submit" Margin="30 5 " Background="LightBlue" Foreground="White" BorderBrush="Black" />
+
+        </StackPanel>
+        
+        <!-- Column 2 -->
+
+    </Grid>
+</UserControl>
