@@ -118,7 +118,7 @@ namespace PFDesktopUI.ViewModels
                 return _quadrantFilter;
             }
             set
-            {
+    {
                 _quadrantFilter = value;
                 NotifyOfPropertyChange(() => QuadrantFilter);
             }
