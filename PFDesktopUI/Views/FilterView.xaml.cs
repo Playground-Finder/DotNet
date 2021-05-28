@@ -24,5 +24,10 @@ namespace PFDesktopUI.Views
         {
             InitializeComponent();
         }
+
+        private void AgeFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

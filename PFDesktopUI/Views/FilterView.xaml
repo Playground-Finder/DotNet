@@ -33,55 +33,36 @@
                 <GroupBox.Header>
                     <Label FontSize="14">Age Group</Label>
                 </GroupBox.Header>
-                <ComboBox FontSize="14" IsEditable="False" x:Name="AgeSelection">
-                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
-                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
-                    <ComboBoxItem>Both</ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name ="AgeFilter" FontSize="14" IsEditable="False" ItemsSource="{Binding AgeFilter}" SelectionChanged="AgeFilter_SelectionChanged" SelectedIndex="0"/>
             </GroupBox>
 
             <GroupBox>
                 <GroupBox.Header>
                     <Label FontSize="14">Accessibility</Label>
                 </GroupBox.Header>
-                <ComboBox FontSize="14" IsEditable="False" x:Name="Accessibility">
-                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
-                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
-                    <ComboBoxItem>Both</ComboBoxItem>
-                </ComboBox>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="AccessibilityFilter" ItemsSource="{Binding AccessibilityFilter}" SelectedIndex ="0"/>
             </GroupBox>
 
             <GroupBox>
                 <GroupBox.Header>
                     <Label FontSize="14">Ground Cover</Label>
                 </GroupBox.Header>
-                <ComboBox FontSize="14" IsEditable="False" x:Name="GroundCover">
-                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
-                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
-                    <ComboBoxItem>Both</ComboBoxItem>
-                </ComboBox>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="GroundCoverFilter" ItemsSource="{Binding GroundCoverFilter}" SelectedIndex="0"/>
             </GroupBox>
 
             <GroupBox>
                 <GroupBox.Header>
                     <Label FontSize="14">Size</Label>
                 </GroupBox.Header>
-                <ComboBox FontSize="14" IsEditable="False" x:Name="Size">
-                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
-                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
-                    <ComboBoxItem>Both</ComboBoxItem>
-                </ComboBox>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="SizeFilter" ItemsSource="{Binding SizeFilter}" SelectedIndex="0"/>
             </GroupBox>
 
             <GroupBox>
                 <GroupBox.Header>
                     <Label FontSize="14">Quadrant</Label>
                 </GroupBox.Header>
-                <ComboBox FontSize="14" IsEditable="False" x:Name="Quandrant">
-                    <ComboBoxItem>Junior (2-5)</ComboBoxItem>
-                    <ComboBoxItem>Senior (6-12)</ComboBoxItem>
-                    <ComboBoxItem>Both</ComboBoxItem>
-                </ComboBox>
+                <ComboBox FontSize="14" IsEditable="False" x:Name="QuadrantFilter" ItemsSource="{Binding QuadrantFilter}" SelectedIndex="0"/>
+               
             </GroupBox>
 
             <Button Content="Submit" Margin="30 5 " Background="LightBlue" Foreground="White" BorderBrush="Black" />

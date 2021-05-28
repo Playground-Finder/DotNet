@@ -32,6 +32,14 @@ namespace PFDesktopUI.Library.Api
             _apiClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
+        public HttpClient ApiClient
+        {
+            get 
+            { 
+                return _apiClient;
+            }
+        }
+
         public async Task<AuthenticatedUser> Authenticate(string username, string password)
         {
             var data = new FormUrlEncodedContent(new[]

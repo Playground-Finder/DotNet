@@ -29,7 +29,8 @@ namespace PFDesktopUI
 
         protected override void Configure()
         {
-            _container.Instance(_container);
+            _container.Instance(_container)
+                .PerRequest<IFilterFieldEndpoint,FilterFieldEndpoint>();
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
