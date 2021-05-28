@@ -8,11 +8,14 @@ using System.Web.Http;
 
 namespace PFDataManager.Controllers
 {
+    /// <summary>
+    /// Controller for supplying set up information to the UI.  
+    /// </summary>
     [RoutePrefix("api/UI")]
     public class UIController : ApiController
     {
         /// <summary>
-        /// Provides the contents of the combobox for the requested filter.
+        /// Provides the contents of the combo box for the requested filter.
         /// </summary>
         /// <param name="FilterName">Name of the filter field</param>
         /// <returns>String list of the filter options</returns>
