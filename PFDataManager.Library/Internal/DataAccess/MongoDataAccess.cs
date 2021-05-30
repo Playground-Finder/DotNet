@@ -1,4 +1,7 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Conventions;
+using MongoDB.Driver;
+using PFDataManager.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -22,6 +25,7 @@ namespace PFDataManager.Library.Internal.DataAccess
 
         private void InitializeClient()
         {
+           
             if (_client == null)
             {
                 var connectionString = ConfigurationManager.ConnectionStrings["mongo"].ConnectionString;

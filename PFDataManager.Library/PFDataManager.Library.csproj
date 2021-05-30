@@ -119,8 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\FilterFieldsData.cs" />
+    <Compile Include="DataAccess\PlaygroundData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Internal\DataAccess\MongoDataAccess.cs" />
+    <Compile Include="Models\PlaygroundModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
