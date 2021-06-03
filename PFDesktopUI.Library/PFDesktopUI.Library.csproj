@@ -52,10 +52,14 @@
     <Compile Include="Api\FilterFieldEndpoint.cs" />
     <Compile Include="Api\IAPIHelper.cs" />
     <Compile Include="Api\IFilterFieldEndpoint.cs" />
+    <Compile Include="Api\IPlaygroundEndpoint.cs" />
+    <Compile Include="Api\PlaygroundEndpoint.cs" />
+    <Compile Include="EventModels\FilterEvent.cs" />
     <Compile Include="EventModels\LogInEvent.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\ILoggedInUserModel.cs" />
     <Compile Include="Models\LoggedInUserModel.cs" />
+    <Compile Include="Models\PlaygroundModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using PFDesktopUI.Library.Api;
+using PFDesktopUI.Library.EventModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,10 +24,12 @@ namespace PFDesktopUI.ViewModels
         private BindingList<string> _quadrantFilter;
         private string _quadrantLabel = "Quadrant";
         private IFilterFieldEndpoint _filterFieldEndpoint;
+        private IEventAggregator _events;
 
-        public FilterViewModel(IFilterFieldEndpoint filterFieldEndpoint)
+        public FilterViewModel(IFilterFieldEndpoint filterFieldEndpoint, IEventAggregator events)
         {
             _filterFieldEndpoint = filterFieldEndpoint;
+            _events = events;
         }
 
         protected override async void OnViewLoaded(object view)
@@ -122,6 +125,13 @@ namespace PFDesktopUI.ViewModels
                 _quadrantFilter = value;
                 NotifyOfPropertyChange(() => QuadrantFilter);
             }
+        }
+
+        public void SubmitFilter()
+        {
+           
+            _events.PublishOnUIThread(new FilterEvent());
+           
         }
 
     }

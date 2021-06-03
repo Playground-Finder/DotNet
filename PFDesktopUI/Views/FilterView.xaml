@@ -65,7 +65,7 @@
                
             </GroupBox>
 
-            <Button Content="Submit" Margin="30 5 " Background="LightBlue" Foreground="White" BorderBrush="Black" />
+            <Button x:Name="SubmitFilter" Content="Submit" Margin="30 5 " Background="LightBlue" Foreground="White" BorderBrush="Black" />
 
         </StackPanel>
         

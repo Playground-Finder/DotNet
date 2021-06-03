@@ -8,16 +8,18 @@ using System.Threading.Tasks;
 
 namespace PFDesktopUI.ViewModels
 {
-    class ShellViewModel : Conductor<object>, IHandle<LogInEvent>
+    class ShellViewModel : Conductor<object>, IHandle<LogInEvent>, IHandle<FilterEvent>
     {
      
         private IEventAggregator _events;
         private FilterViewModel _filterVM;
+        private PlaygroundViewModel _playgroundVM;
         private SimpleContainer _container;
 
-        public ShellViewModel( IEventAggregator events, FilterViewModel filterVM, SimpleContainer container)
+        public ShellViewModel( IEventAggregator events, FilterViewModel filterVM, SimpleContainer container, PlaygroundViewModel playgroundVM)
         {
             _filterVM = filterVM;
+            _playgroundVM = playgroundVM;
             _container = container;
 
             _events = events;
@@ -29,6 +31,11 @@ namespace PFDesktopUI.ViewModels
         public void Handle(LogInEvent message)
         {
             ActivateItem(_filterVM);
+        }
+
+        public void Handle(FilterEvent message)
+        {
+            ActivateItem(_playgroundVM);
         }
     }
 }

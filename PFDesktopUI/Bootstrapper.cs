@@ -30,7 +30,8 @@ namespace PFDesktopUI
         protected override void Configure()
         {
             _container.Instance(_container)
-                .PerRequest<IFilterFieldEndpoint,FilterFieldEndpoint>();
+                .PerRequest<IFilterFieldEndpoint,FilterFieldEndpoint>()
+                .PerRequest<IPlaygroundEndpoint, PlaygroundEndpoint>(); ;
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
